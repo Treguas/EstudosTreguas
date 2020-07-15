@@ -1,0 +1,125 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    line-height: 1;
+    background-color: gray;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+:root {
+    --background: #ecf0f1;
+    --text: #1d1d1f;
+}
+
+.background-img {
+    width: 100%;
+    margin:0 auto;
+}
+
+.simple-container {
+    background-color: var(--background);
+    width: 70%;
+    margin: 0 auto;
+    padding: 20px 5px 100vh;
+}
+
+h1 {
+    line-height: auto;
+    text-align: center;
+    font-family: "SF Pro Display", "SF Pro Icons",Arial, Helvetica, sans-serif;
+    font-weight: 600px;
+    font-size: 80px;
+    color: var(--text);
+    letter-spacing: -.015em;
+}
+
+h2 {
+    font-weight: 400px;
+    font-size: 48px;
+    font-family: "SF Pro Display", "SF Pro Icons",Arial, Helvetica, sans-serif;
+}
+
+h2.subtitle {
+    text-align: center;
+    line-height: auto;
+    width: 600px;
+    margin: 16px auto;
+    color: var(--text);
+    font-size: 24px;
+    line-height: 1.33341;
+    font-weight: 400;
+    letter-spacing: .009em;
+    font-family: "SF Pro Display","SF Pro Icons","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+
+
+.titulo1{
+    width: 100%;
+    background-color: #360;
+    line-height:50px;
+    font-size:18px;
+    color: #FFF;
+    float:left;
+    text-align:center;
+}
+             
+.titulo2 {
+    width: 90%;
+    background-color: #036;
+    line-height:80px; 
+    font-size:18px; 
+    color: #FFF; 
+    float:left; 
+    margin: 25px 0;  
+    text-align: center; 
+}
+            
+.menu1{
+    width: 20%;
+    background-color: #8c0000;
+    line-height:40px;
+    font-size:18px;
+    color: #FFF;
+    float:left;
+    margin:0 2px;
+    text-align:center;
+}
+             
