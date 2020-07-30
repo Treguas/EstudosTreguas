@@ -20,3 +20,11 @@ function aluno(nota){
 
 const resultado = aluno(10)
 console.log(resultado);
+
+
+//Operador ternário
+
+let pontos = 100;
+let usuario = pontos > 100 ? 'Premium' : 'Comum';
+
+console.log(usuario);
