@@ -62,7 +62,7 @@ function marcarComoReprovado(alunos) {
     }
   }
 }
-marcarComoReprovado(alunosDaTurmaA)
+
 
 function enviarMensagemReprovado(aluno) {
   if(aluno.reprovado) {
