@@ -54,6 +54,15 @@ const alunosDaTurmaB = [
   }
   ]
 
+function calculaMedia(alunos) {
+  let soma = 0;
+  for(let i=0; i<alunos.length; i++) {
+    soma = soma + alunos[i].nota
+  }
+  const media = soma/alunos.length
+  return media
+}
+
 function marcarComoReprovado(alunos) {
   for (aluno of alunos) {
     aluno.reprovado = false;
