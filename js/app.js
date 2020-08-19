@@ -28,3 +28,58 @@ let pontos = 100;
 let usuario = pontos > 100 ? 'Premium' : 'Comum';
 
 console.log(usuario);
+
+
+//Estrutura de Repeticao
+
+const alunosDaTurmaA = [
+  {
+    nome: 'Vagner',
+    nota: 8
+  },
+  {
+    nome: 'Felipe',
+    nota: 6
+  }
+  ]
+
+const alunosDaTurmaB = [
+  {
+    nome: 'Daniel',
+    nota: 8
+  },
+  {
+    nome: 'Lucas',
+    nota: 5
+  }
+  ]
+
+function marcarComoReprovado(alunos) {
+  for (aluno of alunos) {
+    aluno.reprovado = false;
+    if (aluno.nota < 5) {
+      aluno.reprovado = true;
+    }
+  }
+}
+marcarComoReprovado(alunosDaTurmaA)
+
+function enviarMensagemReprovado(aluno) {
+  if(aluno.reprovado) {
+  console.log(`O aluno ${aluno.nome} está reprovado!`)
+  }
+}
+
+function alunoReprovado(alunos) {
+  for (let aluno of alunos) {
+    marcarComoReprovado(aluno);
+    enviaMensagemReprovado(aluno)
+  }
+}
+ 
+
+alunoReprovado(alunosDaTurmaA);
+alunoReprovado(alunosDaTurmaB);
+    
+  
+
