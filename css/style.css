@@ -24,8 +24,9 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
+    font-family: 'Poppins', sans-serif;
     line-height: 1;
-    background-color: gray;
+    background-color: snow;
 }
 ol, ul {
 	list-style: none;
