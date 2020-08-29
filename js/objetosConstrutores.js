@@ -17,9 +17,15 @@ var turma = [
    criarAluno('Hailie', 10, 7)
 ]
 
-var aluno = turma[1]
+var aluno = turma[0]
 
 console.log(aluno);
 console.log(aluno.media());
 
+
+for(aluno of turma) {
+
+    console.log(aluno)
+    console.log(aluno.media())
+}
 
