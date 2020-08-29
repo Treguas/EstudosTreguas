@@ -22,10 +22,9 @@ var aluno = turma[0]
 console.log(aluno);
 console.log(aluno.media());
 
-
+//or ex.(var aluno of turma)
 for(aluno of turma) {
 
     console.log(aluno)
     console.log(aluno.media())
 }
-
