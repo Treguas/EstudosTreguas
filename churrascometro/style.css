@@ -1,0 +1,21 @@
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 0;
+}
+
+.container {
+    max-width: 300px;
+    margin: auto;
+    background-color: teal;
+    padding: 28px;
+    border-radius: 10px;
+}
+
+input {
+    box-sizing: border-box;
+    padding: 5px;
+    width: 100%;
+    display: block;
+    margin-bottom: 10px;
+}
