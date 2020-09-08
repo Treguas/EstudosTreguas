@@ -1,0 +1,37 @@
+
+
+/*DISPLAY BLOCK MARGIN AUTO*/
+.buttonBlock {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*----------*/
+/*POSITION ABSOLUTE PRECISA TER O PAI RELATIVE - PRECISA TER LARGURA E ALTURA PARA O ELEMENTO*/
+.buttonAbsolute {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+}
+/*----------*/
+/*DISPLAY FLEX ELEMENTO PAI -> FLEX*/
+.buttonDisplayFlex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*----------*/
+/* DISPLAY IN-LINE BLOCK*/
+.father {
+    text-align: center;
+}
+
+.buttonInLineBlock {
+    display: inline-block;
+}
+/*----------*/
