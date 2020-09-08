@@ -1,12 +1,24 @@
+body {
+    display: flex;
+    background: rgb(58, 204, 192);
+}
+
 
 h1 {
     font-family: 'Courier New', Courier, monospace;
     margin-top: 0;
 }
 
+
 .container {
-    max-width: 300px;
+    height: 50%;
     margin: auto;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    max-width: 300px;
     background-color: teal;
     padding: 28px;
     border-radius: 10px;

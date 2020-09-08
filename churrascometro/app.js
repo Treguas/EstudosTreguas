@@ -17,9 +17,9 @@ function calcular() {
 
 
     
-    resultado.innerHTML = `<p>${qdtTotalCarnes}g de Carnes</p>`
-    resultado.innerHTML += `<p>${qdtTotalCervejas}ml de Cervejas</p>`
-    resultado.innerHTML += `<p>${qdtTotalBebidas}ml de Bebidas</p>`
+    resultado.innerHTML = `<p>${qdtTotalCarnes/1000} Kg de Carnes</p>`
+    resultado.innerHTML += `<p>${Math.ceil(qdtTotalCervejas/355)} Latas de Cervejas</p>`
+    resultado.innerHTML += `<p>${Math.ceil(qdtTotalBebidas/2000)} Garrafas de Bebidas</p>`
       
 }
 
