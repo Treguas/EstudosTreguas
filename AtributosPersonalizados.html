@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AtributosPesonalizados</title>
+</head>
+<body>
+
+    <ul id="lista" data-num="10"></ul>
+
+
+
+
+
+
+
+    <script>
+
+        let lista = document.getElementById('lista');
+        //let num = parseInt(lista.getAttribute('data-num'));
+        let num = parseInt(lista.dataset.num); //acessar atributo do html!
+
+        let conteudo = "";
+
+
+
+        for (let i = 0; i < num; i++) {
+            conteudo += `<li>${i}</li>`;
+        }
+
+        lista.innerHTML = conteudo;
+
+
+
+
+    </script>
+
+    ª!ªª{`^Ç>:</body>?°°e°°°°°}
+
+
+
+
+
+    
+</body>
+</html>
