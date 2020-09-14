@@ -12,3 +12,34 @@ t2.onclick = putUpperCase;
 function putUpperCase() {
     this.innerHTML = this.innerHTML.toUpperCase();
 }
+
+/**------This */
+
+
+/**Example one */
+let dog = {
+    sound: "Au Au",
+    speak: function() {
+        console.log('this.sound');
+
+    }
+}
+
+/*Example two */
+
+
+function speakGeneric() {
+    console.log(this.sound);
+}
+
+let dog = {
+    sound: "Au Au",
+    speak: speakGeneric
+}
+
+let cat = {
+    sound: "Miau",
+    speak: speakGeneric
+}
+
+let bindedFunction = speakGeneric.bind(cat);
