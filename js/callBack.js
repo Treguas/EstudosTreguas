@@ -50,3 +50,36 @@ insertUsers("Maria")
 
 
 
+    /** Async Await**/
+
+    function insertUsers(name) {
+
+        let promises = new Promise(function(resolve, reject) {
+     
+        setTimeout(() => {
+            users.push(name);
+            let error = false;
+
+            if (!error) {
+                resolve();
+            }else {
+                reject({msg: "Erro Encontrado!"})
+            }
+        }, 1000);
+    })
+        return promise;
+}
+
+
+function listUsers() {
+    console.log(users);
+}
+
+async function executar() {
+    await insertUsers ("Maria");
+    listUsers();
+}
+
+executar();
+
+
