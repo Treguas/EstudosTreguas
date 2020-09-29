@@ -19,7 +19,7 @@ db.collection("timeA").get()
 
         snapshot.forEach((doc)=> {
             let jogador = doc.data();
-            console.log(jogador.clubes);
+            console.log(jogador.nome);
             //console.log(doc.data());
         })
     })
@@ -72,3 +72,38 @@ db.collection("timeA").get()
   }).catch(err => {
     console.log(err);
   })*/
+
+
+  //Criar Usuario
+  /*function criarUsuario() {
+  let newUserEmail = document.getElementById('inputEmail').value;
+  let newUserPassword = document.getElementById('inputPassword').value;
+  //let newUserEmail = 'novoteste@teste.com';
+  //let newUserPassword ='123mudar@';
+
+  let auth = firebase.auth()
+
+  auth.createUserWithEmailAndPassword(newUserEmail, newUserPassword)
+    .then(user=> {
+      console.log(user);
+    }).catch(error => {
+      console.log(error);
+    })
+  }*/
+
+    //Sign User
+    /*function login() {
+      //let newUserEmail = 'novoteste@teste.com';
+      //let newUserPassword ='123mudar@';
+    
+      let auth = firebase.auth()
+    
+      auth.signInWithEmailAndPassword(newUserEmail, newUserPassword)
+        .then(user=> {
+          console.log(auth.currentUser);
+        }).catch(error => {
+          console.log(error);
+        })
+      }*/
+
+      
