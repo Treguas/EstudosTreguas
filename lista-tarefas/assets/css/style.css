@@ -56,3 +56,16 @@ form button {
 form button:hover {
   background: var(--primary-color-darker);
 }
+
+.title {
+  text-align: center;
+}
+
+.btn-tarefa {
+  width: 100%;
+
+}
+
+.input-tarefa {
+  width: 100%;
+}
