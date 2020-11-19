@@ -36,3 +36,7 @@ function clearInput() {
     inputTask.value = '';
     inputTask.focus();
 }
+
+function createButtonDelete() {
+    
+}
