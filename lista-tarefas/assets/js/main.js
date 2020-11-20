@@ -6,7 +6,6 @@ btnTask.addEventListener('click', function() {
     if (!inputTask.value) {
         alert('Digite uma Tarefa');
     }
-
     createTask(inputTask.value);
 });
 
@@ -17,7 +16,6 @@ inputTask.addEventListener('keypress', function(e) {
         }
         createTask(inputTask.value);
     }
-
 });
 
 function createLi() {
@@ -30,6 +28,8 @@ function createTask(textInput) {
     li.innerHTML = textInput;
     task.appendChild(li);
     clearInput();
+    createButtonDelete(li);
+    saveTask();
 }
 
 function clearInput() {
@@ -37,6 +37,43 @@ function clearInput() {
     inputTask.focus();
 }
 
-function createButtonDelete() {
-    
+function createButtonDelete(li) {
+    li.innerText += ' '; 
+    const btnDelete = document.createElement('button');
+    btnDelete.innerText = 'Apagar'
+    btnDelete.setAttribute('class', 'apagar');
+    btnDelete.setAttribute('title', 'Apagar esta tarefa!')
+    li.appendChild(btnDelete);    
 }
+
+document.addEventListener('click', function(e){
+    const el = e.target;
+
+    if (el.classList.contains('apagar')){
+        el.parentElement.remove();
+        saveTask();
+    }
+})
+
+function saveTask() {
+    const liTask = task.querySelectorAll('li');
+    const listOfTask = [];
+
+        for (let task of liTask) {
+            let taskText = task.innerText;
+            taskText = taskText.replace('Apagar', '').trim();
+            listOfTask.push(taskText);
+        }
+            const taskJSON = JSON.stringify(listOfTask);
+            localStorage.setItem('task', taskJSON);
+}
+
+function returnTaskSave() {
+    const task = localStorage.getItem('task');
+    const listOfTask = JSON.parse(task);
+
+    for(let task of listOfTask) {
+        createTask(task);
+    }
+}
+returnTaskSave();
