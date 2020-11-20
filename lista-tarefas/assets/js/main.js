@@ -3,17 +3,14 @@ const btnTask = document.querySelector('.btn-task');
 const task = document.querySelector('.task');
 
 btnTask.addEventListener('click', function() {
-    if (!inputTask.value) {
-        alert('Digite uma Tarefa');
-    }
-    createTask(inputTask.value);
-});
+    if (!inputTask.value) return;
+  createTask(inputTask.value);
+  });
+
 
 inputTask.addEventListener('keypress', function(e) {
     if (e.keyCode === 13) {
-        if (!inputTask.value) {
-            alert('Digite uma Tarefa');
-        }
+        if (!inputTask.value) return;
         createTask(inputTask.value);
     }
 });
@@ -24,6 +21,7 @@ function createLi() {
 }
 
 function createTask(textInput) {
+ 
     const li = createLi();
     li.innerHTML = textInput;
     task.appendChild(li);
