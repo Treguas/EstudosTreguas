@@ -38,7 +38,7 @@ function clearInput() {
 function createButtonDelete(li) {
     li.innerText += ' '; 
     const btnDelete = document.createElement('button');
-    btnDelete.innerText = 'Apagar'
+    btnDelete.innerHTML = '';
     btnDelete.setAttribute('class', 'apagar');
     btnDelete.setAttribute('title', 'Apagar esta tarefa!')
     li.appendChild(btnDelete);    
