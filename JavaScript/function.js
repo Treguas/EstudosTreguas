@@ -50,3 +50,22 @@ function SumArgs() {
 }
 
 SumArgs(10,20,30,40,50);
+
+function args(a,b,c,d,e,f) {
+
+}
+
+args();
+
+// Rest Operator ... 
+function conta(operador, acumulador, ...numeros) {
+    for(let numero of numeros) {
+        if(operador === '+') acumulador += numero;
+        if(operador === '-') acumulador -= numero;
+        if(operador === '/') acumulador /= numero;
+        if(operador === '*') acumulador *= numero;
+    }
+    console.log(acumulador);
+}
+
+conta('+', 2, 1,20,50,30);
