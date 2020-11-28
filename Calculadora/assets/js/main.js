@@ -1,4 +1,4 @@
-function createCalculator() {
+function Calculator() {
     this.display = document.querySelector('.display');
         this.start = () => {
             this.getClick();//Captura os Cliques
@@ -52,5 +52,5 @@ function createCalculator() {
     }  
 }
 
-const calculator = new createCalculator();
+const calculator = new Calculator();
 calculator.start();
