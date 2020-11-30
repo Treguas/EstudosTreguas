@@ -1,3 +1,9 @@
+const numeros = [05,10,22,44,51,08,12,02,03,40,50,07];
+const numerosFiltrados = numeros.filter((valor) => {
+    return valor < 10;
+});
+console.log(numerosFiltrados);
+
 function newStudent(name, age) {
     return {name, age}
 }
