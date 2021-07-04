@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "kondzilla-316418": {
+      "hosting": {
+        "treinoKond": [
+          "kondzilla-316418"
+        ]
+      }
+    }
+  }
+}

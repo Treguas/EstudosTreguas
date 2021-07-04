@@ -1,0 +1,16 @@
+<li *ngFor="let item of users; index as i">{{item.nome}} - {{item.cpf}}</li>
+
+<br>
+<form>
+  <input [(ngModel)]="userInputs.nome" type="text" name="nome" id="nome" >
+  <br>
+  <input [(ngModel)]="userInputs.cpf" type="text" name="cpf" id="cpf" >
+  <br>
+  <input type="button" (click)="service.insertUser(userInputs)" value="Salvar">
+  <br>
+  <input type="button" (click)="service.updateUser(userInputs, userInputs)" value="Update">
+  <br>
+  <input type="button" (click)="service.deleteUser(userInputs)" value="Delete">
+  {{ userInputs | json }}
+
+</form>
