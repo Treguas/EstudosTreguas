@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal</title>
+</head>
+<style>
+  .backdrop
+  {
+
+  }
+  dialog::backdrop
+  {
+    background-color: rgb(0,0,0 /.3)
+  }
+  dialog
+  {
+    padding: 0.4rem;
+    border: none;
+    border-radius: .5rem;
+    box-shadow: 0 0 1em rgb(0,0,0 /.3);
+    width: 50%;
+  }
+</style>
+<body>
+  <button>Open Modal</button>
+  <dialog>
+      <div class="backdrop">
+      <h3>Title</h3>
+        <p>
+          texto do modal
+        </p>
+      <button>Ok</button>
+    </div>
+    </dialog>
+</body>
+<script>
+  const button = document.querySelector('button');
+  const modal = document.querySelector('dialog');
+  const buttonClose = document.querySelector('dialog button')
+  const backdrop = document.querySelector('backdrop')
+
+  button.onclick = function(e)
+  {
+    console.log(e.target)
+    modal.showModal();
+  }
+
+  modal.onclick = function(event)
+  {
+    if (event.target == event.currentTarget)
+    {
+      modal.close();
+    }
+  }
+
+
+  buttonClose.onclick = function()
+  {
+    modal.close();
+  }
+
+</script>
+</html>
