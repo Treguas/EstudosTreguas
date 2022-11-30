@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  userId    String   @id @default(uuid())
+  // googleId  String   @unique
+  avatarUrl String?
+  password  String
+  firstName String
+  lastName  String
+  phone     String
+  address   String
+  addressNumber   String
+  neighborhood String
+  locale String 
+  state String
+  zipCode String
+  token     String
+  email     String   @unique
+  createAt  DateTime @default(now())
+
+  donations Donation[]
+}
+
+// model Profile {
+//   profileId Int     @id @default(autoincrement())
+//   imgURL    String
+//   about     String
+//   isAdmin   Boolean @default(false)
+
+//   user      User   @relation(fields: [userEmail], references: [email])
+//   userEmail String @unique
+// }
+
+model Donation {
+  donationId     String @id @default(uuid())
+  name           String
+  typeDonation   String
+  status         String
+  donationAmount String
+
+  createAt DateTime @default(now())
+  user     User     @relation(fields: [UUID], references: [userId])
+  UUID     String
+}
