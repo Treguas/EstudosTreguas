@@ -28,11 +28,13 @@ ul.onclick = (event) => {
   let allItems = getItemLocalStorage();
   if (event.target.classList.contains('delete')) {
     event.target.parentElement.remove();
-    let uuid = event.target.id
-    var indice = allItems.indexOf(uuid);
-    allItems.splice(indice, 1);
+    let uuid = event.target.id;
 
-    localStorage.setItem("todo", JSON.stringify(allItems));
+    const newArray = allItems.filter(function(el) { 
+      return el.id !== uuid; 
+    });
+
+    localStorage.setItem("todo", JSON.stringify(newArray));
   }
 }
 
@@ -41,10 +43,13 @@ function editar(event) {
   console.log(event)
   event.target.parentElement.remove();
   document.getElementById('input-add').value = event.target.parentElement.firstElementChild.textContent;
-  let uuid = event.target.id
-  var indice = allItems.indexOf(uuid);
-  allItems.splice(indice, 1);
-  localStorage.setItem("todo", JSON.stringify(allItems));
+  let uuid = event.target.id;
+
+    const newArray = allItems.filter(function(el) { 
+      return el.id !== uuid; 
+    });
+
+  localStorage.setItem("todo", JSON.stringify(newArray));
 
 }
 
